@@ -975,6 +975,24 @@ SEÇÃO 17-APIs, WEBSERVICES E REST
         ->feita adaptação de locacaos para locacoes 
         ->alterado o .env 
         ->rodada as migrates com php artisan migrate
+
+287-entendendo o grupo de rotas web e API e a importancia do content-type 
+        ->o retorno para o usuário pode ser uma view com html (visual) ou em json como API (informações que ficam disponiveis para consultas posteriores)
+        ->quando a route apontar para API, no url, deve ser incluido o  'api' : ex: http://localhost:8000/api/, porem nã ose usa API para retornar conteudo HTML 
+        ->com API, usa-se para retornar conteúdo JSON
+        ->consequententemente, quando verificamos em network do dev tools, o content-type mostra que o formato é application/json 
+        
+288-rotas e a diferença entre Route::resource e Route::apiResource 
+        ->em api.php, foi criada uma route de 'cliente', e como segundo parametro, o endereço do controller.(feito no metodo resource, que já cria automaticamente os metodos do controller)
+        -> em ApiResource, não se usa os metodos de create e edit 
+        ->quando se trabalha com api, nas route, e se for usar o resource, usa-se o apiResource. ex: 
+        ->consequentemente, no controller de 'ClienteController' foi removido os métodos de create e edit 
+        ->criada as demais route, com metodo apiResource, de carro, locacao, marca e modelo 
+        
+289-extra-(fix da aula anterior) - Atributo $namespace de RouteServiceProvide 
+        ->configuração do laravel para que, nas routes, em vez de passar o endereço completo do controller, passar somente o nome dele 
+                ir em providers/RouteSereviceProvider.php 
+                descomentar na página 29 o: protected $namespace = 'App\\Http\\Controllers'; 
         
 
 
