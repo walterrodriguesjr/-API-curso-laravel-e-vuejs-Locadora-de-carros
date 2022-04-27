@@ -29,4 +29,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
  Route::apiResource('carro', 'CarroController');
  Route::apiResource('locacao', 'LocacaoController');
  Route::apiResource('marca', 'MarcaController');
+ 
  Route::apiResource('modelo', 'ModeloController');

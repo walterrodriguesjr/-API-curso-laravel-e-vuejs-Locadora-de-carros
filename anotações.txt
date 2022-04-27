@@ -994,6 +994,43 @@ SEÇÃO 17-APIs, WEBSERVICES E REST
                 ir em providers/RouteSereviceProvider.php 
                 descomentar na página 29 o: protected $namespace = 'App\\Http\\Controllers'; 
         
+290-criando registros via POST 
+        ->no postman, foi feita uma requisição teste de POST, em localhost:8000/api/marca 
+        ->em seguida, no Body da requisição, foi usado o x-www-form-urlencoded 
+                ali são inseridos dados equivalente aos names dos inputs de um form normal 
+        ->feita a configuração de create no controller 'MarcaController'
+        ->criado a variavel protected $fillable na model Marca, informando quais dados podem ser alterados em banco 
+        ->neste momento, o postman está sendo usado como se fosse a view com um form de inserção, que se comunica 
+         com o controller e o model respecivo do código 
+         
+291-selecionando registros via GET 
+        ->criado mais dois end point para consulta do tipo marca 
+        ->1 para recupar todos os registros, e o outro, 1 registro em específico 
+        ->feito os testes destas requisições através do controller MarcaController
+
+292-atualizando registros via PUT e PATCH 
+        ->criado end point para fazer UPDATE 
+        ->diferença entre PUT e PATCH = o PATCH é usado para atualizar PARTE DO RECURSO, e não geral 
+        
+293-removendo registros via DELETE 
+        ->criado end point para fazer DELETE (destroy)
+        ->feita a logica em controller 'MarcaController' com o metodo delete() 
+        
+294-extra-entendendo o conceito de endpoint(URL, URN, URI) 
+        ->URL - uniform resource locator = Host onde está o recurso 
+        ->URN - uniform resource name = Nome do recurso universal (oque está acessivel dentro do host da URL)
+        ->URI - uniform resource identifier = combinação do protocolo + URL + URN identificador unico 
+
+295-injetando a instancia do model no controller e como lidar com o type hinting 
+        ->mostrado e usado outra maneira de ligar a model ao controller 
+        ->feito os devidos refactory em MarcaController 
+        ->resumindo, a model Marca, foi injetada no controller MarcaController por meio de um __construct 
+                 não é a melhor conduta de usar, apenas mais uma opção de trabalhar 
+        ->a model não é chammada diretamente em cada metodo do controller, como na maneira anterior 
+
+296-validações parte 1 - controle de fluxos 
+        ->
+
 
 
 
