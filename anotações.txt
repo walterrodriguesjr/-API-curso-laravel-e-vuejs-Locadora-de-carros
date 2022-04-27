@@ -1029,7 +1029,16 @@ SEÇÃO 17-APIs, WEBSERVICES E REST
         ->a model não é chammada diretamente em cada metodo do controller, como na maneira anterior 
 
 296-validações parte 1 - controle de fluxos 
+        ->feito retornos de erros em texto dentro do controller MarcaController nos métodos 
+
+297-validações parte 2 - status code HTTP 
+        ->mostrada no metodo show, a utilização do helper response() que trate de mostrar o tipo de erro ao client 
+        ->inserido o devido protocolo de resposta HTTP (200 etc) em cada metodo do controller MarcaController 
+
+298-validações parte 3 - validando parametros e a importancia do accept
         ->
+
+
 
 
 
