@@ -1035,7 +1035,39 @@ SEÇÃO 17-APIs, WEBSERVICES E REST
         ->mostrada no metodo show, a utilização do helper response() que trate de mostrar o tipo de erro ao client 
         ->inserido o devido protocolo de resposta HTTP (200 etc) em cada metodo do controller MarcaController 
 
-298-validações parte 3 - validando parametros e a importancia do accept
+298-validações parte 3 - validando parâmetros e a importancia do accept 
+        ->foi testado o validate com modo api e usando o accept para debugar e mostrar o erro e retorna aviso em json 
+
+299-implementando as regras de validação (Rules) no Model 
+        ->feito um refectoring do método validate 
+        ->as regras de validação foram levadas para o model, e são chamadas como parametro no controller 
+
+300-validações parte 4 - regras de validação no Update-lidando com o Unique 
+        ->outros metodos de validação disponivel para o update 
+
+301-validações parte 5 - regras de validação no update - lidando com o PUT/PATH 
+        ->trata das requições de update via PATH, que serve para atualizações pontuais, individualmente 
+        
+302-upload de arquivos - implementando o upload de imagens parte 1 
+        ->serve para qualquer tipo de arquivo, text, som etc 
+        ->neste caso, no postman, usado no body, o metodo form-data 
+        
+303-upload de arquivos - implementando o upload de imagens parte 2
+        ->fazendo salvamento de imagem por meio de path
+        ->configurar o arquivo filesystem.php no diretorio config 
+        ->o s3 da amazon possibilita construir um driver para salvar imagens 
+        ->o s3 é um servidor cloud específico de armazenamento 
+        ->feita consistencia de imagens no storare, sem precisar usar o banco de dados 
+        
+304-upload de arquivos - implementando o upload de imagens parte 3
+        ->mostrado como especificar ,atraves da validação do model, o tipo de arquivo permitido no upload 
+        ->upload de qualquer tipo de arquivo pelo storage 
+
+305-upload de arquivos - criando um link simbolico para o disco public 
+        ->linka o diretorio do storage que contem os arquivos, com o diretorio public disponivel para web 
+        ->serve para que o arquivo possa ser chamado por get 
+        ->usa-se o comando via artisan para criar o link 
+                php artisan storage:link 
         ->
 
 
