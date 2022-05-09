@@ -1068,7 +1068,17 @@ SEÇÃO 17-APIs, WEBSERVICES E REST
         ->serve para que o arquivo possa ser chamado por get 
         ->usa-se o comando via artisan para criar o link 
                 php artisan storage:link 
-        ->
+        
+306-importante-correção do link simbolico do projeto 
+        ->ok 
+
+307-upload de arquivos-atualizando imagens 
+        ->ok 
+
+308-upload de arquivos-removendo imagens        
+        ->ok
+
+
 
 
 
